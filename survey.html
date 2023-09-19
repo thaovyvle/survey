@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	    <meta charset="utf-8">
+	    <title>Survey - Thaovy Le</title>
+	    <meta name="viewport" content="width=device-width">
+	    <link rel="stylesheet" href="css/styles.css">
+        <script src="js/process_form.js"></script>
+    </head>
+    <body>
+        <h1>WELCOME TO THE SURVEY</h1>
+        <div class="gridContainer">
+            <div class="gridItem sidebar"></div>
+            <!--Grid Box for Personal Info Form-->
+            <div class="gridItem">
+                <div class="content">
+                    <form name="surveyform">
+                            <h2>PERSONAL INFORMATION</h2>
+                        <fieldset class="personalForm">
+                            <!--First Name-->
+                            <div class="personalField">
+                                <div class="userInput">
+                                    <label for="firstName">FIRST NAME:</label>
+                                    <input id="firstName" name="firstName"placeholder="" type="text" >
+                                </div>
+                                <div class="formPattern">
+                                    <div id="fnameHint" class="hint">
+                                        <p>Must begin with a Capital Letter</p>
+                                    </div>
+                                    <div id="nameMsg" class="validationMsg">
+                                        <p>Please enter letters only</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Last Name-->
+                            <div class="personalField">
+                                <div class="userInput">
+                                    <label for="lastName">LAST NAME:</label>
+                                    <input id="lastName" name="lastName" placeholder="" type="text" >
+                                </div>
+                                <div class="formPattern">
+                                    <div id="lnameHint" class="hint">
+                                        <p>Must begin with a Capital Letter</p>
+                                    </div>
+                                    <div id="lnameMsg" class="validationMsg">
+                                        <p>Please enter letters & (' ") only</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Email-->
+                            <div class="personalField">
+                                <div class="userInput">
+                                    <label for="email">EMAIL:</label>
+                                    <input id="email" name="email" placeholder="" type="email" >
+                                </div>
+                                <div class="formPattern">
+                                    <div id="emailHint" class="hint">
+                                        <p>Please enter a valid email</p>
+                                    </div>
+                                     <div id="emailMsg" class="validationMsg">
+                                        <p>Must be in blah@blah.com format</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Phone Number-->
+                            <div class="personalField">
+                                <div class="userInput">
+                                    <label for="phoneNum">PHONE NUMBER:</label>
+                                    <input id="phoneNum" name="phoneNum" placeholder="" type="tel">
+                                </div>
+                                <div class="formPattern">
+                                    <div id="phoneHint" class="hint">
+                                        <span class="fas fa-check"></span>
+                                        <p>Enter xxx-xxx-xxxx format</p>
+                                    </div>
+                                    <div id="phoneMsg" class="validationMsg">
+                                        <p>Enter xxx-xxx-xxxx format</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Website URL-->
+                            <div class="personalField">
+                                <div class="userInput">
+                                    <label for="websiteURL">WEBSITE URL:</label>
+                                    <input id="websiteURL" name="websiteURL" placeholder="" type="url">
+                                </div>
+                                <div class="formPattern">
+                                    <div id="webHint" class="hint">
+                                        <p>Please enter a valid website</p>
+                                    </div>
+                                    <div id="webMsg" class="validationMsg">
+                                        <p>Must contain https:// and ~</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+            <!--Grid Box for Survey Form-->
+            <div class="gridItem">
+                <div class="content">
+                    <h2>TAKE THIS SURVEY</h2>
+                <form name="surveyForm" class="surveyQuestions">
+                    <!--Question 1-->
+                    <p id="question1">Do you like animals?</p>
+                        <label><input type="radio" name="q1" class="Q1Yes">YES</label>
+                        <label><input type="radio" name="q1" class="Q1No">NO</label>
+                    <!--Question 2-->
+                    <p id="question2">Would you put a lot of time into a pet?</p>
+                        <label><input type="radio" name="q2" class="Q2Yes">YES</label>
+                        <label><input type="radio" name="q2" class="Q2No">NO</label>
+                    <!--Question 3-->
+                    <p id="question3">Would you want to be affectionate with your pet?</p>
+                        <label><input type="radio" name="q3" class="Q3Yes">YES</label>
+                        <label><input type="radio" name="q3" class="Q3No">NO</label>
+                </form>
+            </div>
+        </div>
+        <div class="gridItem sidebar"></div>
+        </div>
+        <div class="submitButton">
+            <button id="submitButton" onclick="displayResults()">Submit</button>
+        </div>
+        <!--Displays Results & Badge for Survey-->
+        <div class="results">
+            <h3>SURVEY RESULTS</h3>
+            <p id="result1"></p>
+            <p id="result2"></p>
+            <p id="result3"></p>
+            <p id="result4"></p>
+            <div id="badgeImg"></div>
+        </div>
+        <p class="footer">Created for DIG 3716C by Thaovy Le</p>
+    </body>    
+</html>
